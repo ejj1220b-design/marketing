@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Jeong Ji-an — Growth Marketer // Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#0A0A0A;--bg-2:#111113;--bg-3:#16161a;
+  --line:rgba(255,255,255,0.08);--line-2:rgba(255,255,255,0.14);
+  --txt:#EDEDED;--txt-2:#9a9a9a;--txt-3:#5a5a5a;
+  --blue:#00E5FF;--blue-dim:rgba(0,229,255,.15);--blue-glow:rgba(0,229,255,.4);
+  --mag:#FF00A8;--yel:#F5FF3D;--gr:#00FFA3;--red:#FF4455;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  --sans:"Space Grotesk","Noto Sans KR",sans-serif;
+  --display:"Syncopate","Space Grotesk",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;background-image:radial-gradient(circle at 20% 10%, rgba(0,229,255,0.06), transparent 40%),radial-gradient(circle at 80% 80%, rgba(255,0,168,0.04), transparent 40%)}
+body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);background-size:60px 60px;pointer-events:none;z-index:1;mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:#0A0A0A}
+::-webkit-scrollbar-thumb{background:#2a2a2a;border-radius:4px}
+::-webkit-scrollbar-thumb:hover{background:var(--blue)}
+
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:20px 40px;background:rgba(10,10,10,.65);backdrop-filter: blur(14px);-webkit-backdrop-filter: blur(14px);border-bottom:1px solid var(--line)}
+.nav-logo{font-family:var(--mono);font-weight:700;font-size:14px;letter-spacing:.5px;display:flex;align-items:center;gap:10px}
+.nav-logo .dot{width:8px;height:8px;border-radius:50%;background:var(--blue);box-shadow:0 0 12px var(--blue);animation:pulse 2s infinite}
+.nav-logo span{color:var(--blue)}
+.nav-links{display:flex;gap:28px;font-family:var(--mono);font-size:12px;color:var(--txt-2)}
+.nav-links a{transition:color .2s}
+.nav-links a:hover{color:var(--blue)}
+.nav-status{font-family:var(--mono);font-size:11px;color:var(--txt-3);display:flex;align-items:center;gap:8px}
+.nav-status .led{width:6px;height:6px;border-radius:50%;background:var(--gr);box-shadow:0 0 8px var(--gr);animation:pulse 1.5s infinite}
+@media(max-width:820px){.nav{padding:14px 18px}.nav-links{display:none}.nav-status{font-size:10px}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.9)}}
+
+.hero{min-height:100vh;padding:130px 40px 80px;display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center;position:relative;z-index:2;max-width:1400px;margin:0 auto}
+.hero-meta{font-family:var(--mono);font-size:11px;color:var(--txt-3);display:flex;gap:20px;margin-bottom:30px;flex-wrap:wrap}
+.hero-meta span{display:flex;align-items:center;gap:8px}
+.hero-meta span::before{content:"";width:5px;height:5px;background:var(--blue);border-radius:50%}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(36px,6vw,78px);line-height:.95;letter-spacing:-.02em;margin-bottom:24px}
+.hero h1 .accent{color:var(--blue);text-shadow:0 0 30px var(--blue-glow)}
+.hero h1 .thin{font-weight:400;color:var(--txt-2)}
+.terminal{background:#070707;border:1px solid var(--line);border-radius:8px;font-family:var(--mono);font-size:13px;margin:28px 0 32px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.6), 0 0 0 1px rgba(0,229,255,.05)}
+.terminal-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#0e0e0e;border-bottom:1px solid var(--line)}
+.terminal-bar .tb-dot{width:11px;height:11px;border-radius:50%}
+.tb-dot.r{background:#ff5f56}.tb-dot.y{background:#ffbd2e}.tb-dot.g{background:#27c93f}
+.terminal-bar .tb-title{font-size:11px;color:var(--txt-3);margin-left:10px}
+.terminal-body{padding:20px 22px;min-height:140px;color:var(--txt);line-height:1.9}
+.terminal-body .prompt{color:var(--blue);margin-right:6px}
+.terminal-body .str{color:#C3E88D}
+.terminal-body .cm{color:#5a6a70;font-style:italic}
+.terminal-body .tag{color:var(--blue);font-weight:700;margin-top:6px;display:block}
+.typing::after{content:"▊";color:var(--blue);animation:blink 1s infinite;margin-left:2px}
+@keyframes blink{50%{opacity:0}}
+
+.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.tag-pill{font-family:var(--mono);font-size:11px;padding:6px 12px;border:1px solid var(--line-2);border-radius:2px;color:var(--txt-2);background:rgba(255,255,255,.02)}
+.tag-pill.blue{border-color:var(--blue);color:var(--blue);background:var(--blue-dim)}
+
+.hero-photo{position:relative}
+.photo-frame{position:relative;border:1px solid var(--line-2);background:linear-gradient(135deg, rgba(0,229,255,0.08), rgba(255,255,255,0.02));backdrop-filter: blur(10px);padding:14px;border-radius:4px;box-shadow: 0 30px 80px rgba(0,0,0,.7), 0 0 0 1px rgba(0,229,255,.1), inset 0 0 40px rgba(0,229,255,.05)}
+.photo-frame::before{content:"";position:absolute;top:-1px;left:-1px;right:-1px;bottom:-1px;background:linear-gradient(135deg, var(--blue), transparent 30%, transparent 70%, var(--mag));opacity:.4;border-radius:4px;z-index:-1;filter:blur(1px)}
+.photo-inner{aspect-ratio:4/5;background:#191920 url('https://ejj1220b-design.github.io/marketer/jian_photo.jpg') center/cover;position:relative;border-radius:2px;overflow:hidden}
+.photo-inner::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, transparent 60%, rgba(10,10,10,.7));pointer-events:none}
+.photo-overlay{position:absolute;bottom:14px;left:14px;right:14px;z-index:2;display:flex;justify-content:space-between;align-items:flex-end;font-family:var(--mono);font-size:10px;color:var(--blue)}
+.photo-overlay .label{color:var(--txt-3)}
+.photo-corner{position:absolute;width:18px;height:18px;border:1px solid var(--blue)}
+.photo-corner.tl{top:6px;left:6px;border-right:none;border-bottom:none}
+.photo-corner.tr{top:6px;right:6px;border-left:none;border-bottom:none}
+.photo-corner.bl{bottom:6px;left:6px;border-right:none;border-top:none}
+.photo-corner.br{bottom:6px;right:6px;border-left:none;border-top:none}
+
+.photo-readout{position:absolute;top:20px;right:-20px;background:rgba(10,10,10,.9);border:1px solid var(--line-2);padding:10px 14px;border-radius:2px;font-family:var(--mono);font-size:10px;backdrop-filter:blur(10px);transform:translateX(30%)}
+.photo-readout .line{display:flex;gap:14px;color:var(--txt-2);margin:2px 0}
+.photo-readout .line b{color:var(--blue);font-weight:500}
+@media(max-width:900px){.hero{grid-template-columns:1fr;padding:110px 20px 60px;gap:40px}.photo-readout{display:none}.hero-photo{max-width:360px;margin:0 auto}}
+
+.section{padding:120px 40px;position:relative;z-index:2;max-width:1400px;margin:0 auto}
+@media(max-width:820px){.section{padding:80px 20px}}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:50px;flex-wrap:wrap;gap:16px}
+.sec-label{font-family:var(--mono);font-size:11px;color:var(--txt-3);letter-spacing:.2em;text-transform:uppercase}
+.sec-label b{color:var(--blue)}
+.sec-head h2{font-family:var(--display);font-size:clamp(26px,3.5vw,42px);font-weight:700;letter-spacing:-.01em;margin-top:6px}
+.sec-desc{font-family:var(--mono);font-size:12px;color:var(--txt-2);max-width:360px;text-align:right;line-height:1.7}
+
+/* ============================
+   BENTO — 차별화된 스태디움 레이아웃
+   상단 체급 / 중앙 성과 / 하단 효율
+============================ */
+.bento-tier{
+  margin-bottom:18px;
+  position:relative;
+}
+.bento-tier-head{
+  display:flex;align-items:center;gap:14px;
+  font-family:var(--mono);font-size:10px;color:var(--txt-3);
+  letter-spacing:.2em;text-transform:uppercase;
+  margin-bottom:12px;
+}
+.bento-tier-head::after{
+  content:"";flex:1;height:1px;
+  background:linear-gradient(90deg, var(--line-2), transparent);
+}
+.bento-tier-head .step{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:22px;height:22px;border:1px solid var(--blue);color:var(--blue);
+  border-radius:50%;font-weight:700;font-size:10px;
+}
+.bento-tier-head .type{color:var(--blue);letter-spacing:.3em}
+
+.bento-row{display:grid;gap:14px}
+.bento-row.tier-1{grid-template-columns:1.6fr 1fr}
+.bento-row.tier-2{grid-template-columns:1fr 1fr}
+.bento-row.tier-3{grid-template-columns:1fr 1fr}
+
+.mega{
+  position:relative;overflow:hidden;
+  border:1px solid rgba(0,229,255,.35);border-radius:8px;
+  padding:36px 40px;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(0,229,255,.18), transparent 55%),
+    linear-gradient(135deg, rgba(0,229,255,.06), rgba(255,255,255,0));
+  backdrop-filter:blur(10px);
+  min-height:220px;
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.mega::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg, var(--blue), transparent);
+}
+.mega::after{
+  content:"";position:absolute;top:0;right:0;bottom:0;width:2px;
+  background:linear-gradient(180deg, var(--blue), transparent);
+  opacity:.5;
+}
+.mega .mega-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+.mega .mega-label{font-family:var(--mono);font-size:10px;color:var(--txt-3);letter-spacing:.2em;text-transform:uppercase}
+.mega .mega-label b{color:var(--blue);font-weight:500}
+.mega .mega-id{font-family:var(--mono);font-size:10px;color:var(--blue);letter-spacing:.2em}
+.mega .mega-num{
+  font-family:var(--mono);font-weight:800;
+  font-size:clamp(64px,10vw,120px);
+  color:var(--blue);line-height:.9;letter-spacing:-.04em;
+  text-shadow:0 0 40px rgba(0,229,255,.4);
+  margin:16px 0 8px;
+}
+.mega .mega-num .unit{font-size:.35em;color:var(--txt);margin-left:6px;font-weight:500;letter-spacing:0}
+.mega .mega-caption{font-family:var(--mono);font-size:13px;color:var(--txt-2);line-height:1.6}
+.mega .mega-caption b{color:var(--txt);font-weight:500}
+
+.mega-side{
+  border:1px solid var(--line-2);border-radius:8px;padding:28px 26px;
+  background:linear-gradient(135deg, rgba(255,255,255,.04), rgba(255,255,255,0));
+  backdrop-filter:blur(10px);
+  min-height:220px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  position:relative;overflow:hidden;
+}
+.mega-side::before{content:"";position:absolute;top:0;left:0;width:60px;height:1px;background:var(--blue)}
+.mega-side .ms-top{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;color:var(--txt-3);letter-spacing:.15em;text-transform:uppercase}
+.mega-side .ms-top .id{color:var(--blue)}
+.mega-side .ms-num{
+  font-family:var(--mono);font-weight:700;
+  font-size:clamp(40px,5vw,62px);
+  color:var(--txt);line-height:1;letter-spacing:-.03em;
+  margin:12px 0 8px;
+}
+.mega-side .ms-num .unit{font-size:.42em;color:var(--blue);margin-left:4px;font-weight:500}
+.mega-side .ms-num .big{color:var(--blue);text-shadow:0 0 20px rgba(0,229,255,.3)}
+.mega-side .ms-caption{font-family:var(--mono);font-size:12px;color:var(--txt-2);line-height:1.6}
+.mega-side .ms-caption b{color:var(--txt);font-weight:500}
+
+.perf{
+  position:relative;overflow:hidden;
+  border:1px solid var(--line-2);border-radius:8px;padding:28px;
+  background:linear-gradient(135deg, rgba(0,229,255,.04), rgba(255,255,255,0));
+  backdrop-filter:blur(10px);min-height:180px;
+  display:flex;flex-direction:column;justify-content:space-between;
+  transition:border-color .3s, transform .3s;
+}
+.perf:hover{border-color:var(--blue);transform:translateY(-2px)}
+.perf::before{content:"";position:absolute;top:0;left:0;width:80px;height:2px;background:var(--blue)}
+.perf-top{display:flex;justify-content:space-between;align-items:flex-start;font-family:var(--mono);font-size:10px;color:var(--txt-3);letter-spacing:.2em;text-transform:uppercase}
+.perf-top .id{color:var(--blue)}
+.perf-num{
+  font-family:var(--mono);font-weight:700;
+  font-size:clamp(48px,6vw,76px);
+  color:var(--blue);line-height:1;letter-spacing:-.03em;
+  margin-top:14px;
+  text-shadow:0 0 30px rgba(0,229,255,.25);
+}
+.perf-num .unit{font-size:.38em;color:var(--txt);margin-left:4px;font-weight:500}
+.perf-num .pm{color:var(--gr)}
+.perf-num .dn{color:var(--red)}
+.perf-caption{font-family:var(--mono);font-size:12px;color:var(--txt-2);line-height:1.6;margin-top:14px}
+.perf-caption b{color:var(--txt);font-weight:500}
+
+.eff{
+  border:1px solid var(--line);border-radius:8px;padding:24px;
+  background:rgba(255,255,255,.02);backdrop-filter:blur(10px);
+  display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;
+  min-height:140px;
+  transition:border-color .3s;
+}
+.eff:hover{border-color:var(--blue)}
+.eff-num{
+  font-family:var(--mono);font-weight:700;
+  font-size:clamp(40px,5vw,58px);
+  color:var(--blue);line-height:1;letter-spacing:-.03em;
+  border-right:1px solid var(--line-2);padding-right:22px;
+  min-width:140px;text-align:left;
+}
+.eff-num .unit{font-size:.4em;color:var(--txt);margin-left:3px;font-weight:500}
+.eff-num .dn{color:var(--red)}
+.eff-num .small{font-size:.5em;display:block;color:var(--txt-2);margin-top:4px;font-weight:500;letter-spacing:-.02em}
+.eff-body .eff-label{font-family:var(--mono);font-size:10px;color:var(--txt-3);letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px;display:flex;justify-content:space-between}
+.eff-body .eff-label .id{color:var(--blue)}
+.eff-body .eff-caption{font-family:var(--mono);font-size:12px;color:var(--txt-2);line-height:1.6}
+.eff-body .eff-caption b{color:var(--txt);font-weight:500}
+
+@media(max-width:900px){
+  .bento-row.tier-1, .bento-row.tier-2, .bento-row.tier-3{grid-template-columns:1fr}
+  .mega{padding:28px 24px;min-height:auto}
+  .mega-side{min-height:auto}
+  .eff{grid-template-columns:1fr;gap:14px}
+  .eff-num{border-right:none;border-bottom:1px solid var(--line-2);padding:0 0 14px 0;min-width:auto}
+}
+
+/* ===== Case ===== */
+.case{margin-bottom:120px;position:relative}
+.case-head{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;margin-bottom:30px;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.case-id{font-family:var(--mono);font-weight:700;font-size:64px;color:var(--blue);line-height:1;letter-spacing:-.04em;text-shadow:0 0 30px rgba(0,229,255,.2)}
+.case-title h3{font-family:var(--display);font-size:clamp(20px,2.5vw,30px);font-weight:700;letter-spacing:-.01em;line-height:1.1}
+.case-title .meta{font-family:var(--mono);font-size:11px;color:var(--txt-3);margin-top:8px;display:flex;gap:14px;flex-wrap:wrap}
+.case-title .meta span{display:flex;align-items:center;gap:6px}
+.case-title .meta .k{color:var(--blue)}
+.case-status{font-family:var(--mono);font-size:10px;color:var(--gr);padding:5px 10px;border:1px solid var(--gr);border-radius:2px;background:rgba(0,255,163,.08);white-space:nowrap}
+@media(max-width:700px){.case-head{grid-template-columns:auto 1fr;gap:14px}.case-id{font-size:44px}.case-status{grid-column:span 2;justify-self:start}}
+
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.case-col-narrow{grid-template-columns:1.2fr 1fr}
+@media(max-width:900px){.case-grid{grid-template-columns:1fr}}
+
+.panel{background:linear-gradient(135deg, rgba(255,255,255,.03), rgba(255,255,255,0));border:1px solid var(--line);border-radius:6px;padding:22px;backdrop-filter:blur(10px)}
+.panel-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:11px;color:var(--txt-3);margin-bottom:14px;padding-bottom:10px;border-bottom:1px dashed var(--line);letter-spacing:.1em;text-transform:uppercase}
+.panel-head .blue{color:var(--blue)}
+.panel-title{font-size:18px;font-weight:600;letter-spacing:-.01em;margin-bottom:10px;line-height:1.4}
+.panel p{color:var(--txt-2);font-size:14px;line-height:1.8}
+.panel p + p{margin-top:10px}
+.panel p b{color:var(--txt);font-weight:500}
+
+.sub-block{margin-top:16px}
+.sub-block .sb-label{font-family:var(--mono);font-size:10px;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.sub-block .sb-label::before{content:"▸";color:var(--blue)}
+.sub-block ul{list-style:none}
+.sub-block ul li{font-family:var(--mono);font-size:12px;color:var(--txt-2);padding:5px 0 5px 16px;position:relative;line-height:1.7}
+.sub-block ul li::before{content:"›";position:absolute;left:0;color:var(--blue)}
+.sub-block ul li b{color:var(--txt);font-weight:500}
+.sub-block ul li i{color:var(--blue);font-style:normal;font-weight:500}
+
+.ba-table{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px;font-family:var(--mono);font-size:11px}
+.ba-table .col{border:1px solid var(--line-2);border-radius:4px;padding:14px}
+.ba-table .col.b{background:rgba(255,68,85,.05);border-color:rgba(255,68,85,.3)}
+.ba-table .col.a{background:rgba(0,255,163,.05);border-color:rgba(0,255,163,.3)}
+.ba-table .col .lbl{font-size:9px;color:var(--txt-3);text-transform:uppercase;letter-spacing:.15em;margin-bottom:8px}
+.ba-table .col.b .lbl{color:var(--red)}
+.ba-table .col.a .lbl{color:var(--gr)}
+.ba-table .col ul{list-style:none}
+.ba-table .col ul li{padding:3px 0;color:var(--txt-2);line-height:1.6}
+.ba-table .col ul li::before{content:"· ";color:var(--txt-3)}
+@media(max-width:600px){.ba-table{grid-template-columns:1fr}}
+
+.insight-block{margin-top:18px;padding:16px;border-left:2px solid var(--blue);background:rgba(0,229,255,.04);border-radius:2px}
+.insight-block .ib-lbl{font-family:var(--mono);font-size:10px;color:var(--blue);letter-spacing:.2em;text-transform:uppercase;margin-bottom:8px}
+.insight-block ul{list-style:none}
+.insight-block ul li{font-family:var(--mono);font-size:12px;color:var(--txt-2);padding:4px 0 4px 16px;position:relative;line-height:1.7}
+.insight-block ul li::before{content:"//";color:var(--blue);position:absolute;left:0}
+.insight-block ul li b{color:var(--txt);font-weight:500}
+
+.limit-block{margin-top:12px;padding:12px 16px;border:1px dashed rgba(255,68,85,.3);border-radius:2px;background:rgba(255,68,85,.03)}
+.limit-block .lb-lbl{font-family:var(--mono);font-size:10px;color:var(--red);letter-spacing:.2em;text-transform:uppercase;margin-bottom:6px}
+.limit-block p{font-family:var(--mono);font-size:11px;color:var(--txt-2);line-height:1.7}
+
+.metric-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px}
+.metric{flex:1;min-width:120px;border-left:2px solid var(--blue);padding:8px 14px;background:rgba(0,229,255,.04)}
+.metric .mv{font-family:var(--mono);font-weight:700;font-size:20px;color:var(--blue);letter-spacing:-.02em}
+.metric .ml{font-family:var(--mono);font-size:10px;color:var(--txt-2);margin-top:4px;text-transform:uppercase;letter-spacing:.05em}
+
+.img-frame{position:relative;border:1px solid var(--line-2);border-radius:4px;overflow:hidden;background:linear-gradient(135deg, rgba(0,229,255,.06), rgba(255,255,255,0));padding:10px}
+.img-frame-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;color:var(--txt-3);margin-bottom:8px;padding:2px 4px}
+.img-frame-head .ba{padding:2px 8px;border-radius:2px;font-weight:700}
+.ba.before{background:rgba(255,68,85,.15);color:var(--red);border:1px solid rgba(255,68,85,.4)}
+.ba.after{background:rgba(0,255,163,.15);color:var(--gr);border:1px solid rgba(0,255,163,.4)}
+.img-frame img{width:100%;height:auto;display:block;object-fit:contain;border-radius:2px;background:#0a0a0a;max-height:720px}
+.img-frame.card img{aspect-ratio:auto;max-height:520px}
+@media(max-width:720px){
+  .img-frame img{max-height:560px}
+  .img-frame.card img{max-height:420px}
+}
+.img-frame .corner{position:absolute;width:14px;height:14px;border:1px solid var(--blue);z-index:2}
+.img-frame .corner.tl{top:4px;left:4px;border-right:none;border-bottom:none}
+.img-frame .corner.br{bottom:4px;right:4px;border-left:none;border-top:none}
+
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
+
+.phone-mockup{position:relative;width:100%;max-width:220px;aspect-ratio:9/19;background:#000;border:6px solid #1c1c1e;border-radius:30px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.7), inset 0 0 0 1px rgba(255,255,255,.06);margin:0 auto}
+.phone-mockup::before{content:"";position:absolute;top:8px;left:50%;transform:translateX(-50%);width:80px;height:18px;background:#000;border-radius:12px;z-index:3}
+.phone-mockup img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.phone-mockup::after{content:"";position:absolute;bottom:6px;left:50%;transform:translateX(-50%);width:60px;height:3px;background:#fff;border-radius:2px;opacity:.4;z-index:3}
+.phone-label{text-align:center;font-family:var(--mono);font-size:11px;color:var(--txt-2);margin-top:12px}
+.phone-row{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+
+.monitor{background:#1c1c1e;padding:12px 12px 8px;border-radius:8px 8px 2px 2px;box-shadow:0 20px 50px rgba(0,0,0,.5);position:relative}
+.monitor::before{content:"";display:block;height:22px;margin-bottom:8px;background:#0e0e0e;border-radius:4px;background-image:radial-gradient(circle at 10px 50%, #ff5f56 3px, transparent 3px),radial-gradient(circle at 26px 50%, #ffbd2e 3px, transparent 3px),radial-gradient(circle at 42px 50%, #27c93f 3px, transparent 3px)}
+.monitor-screen{background:#000;border-radius:2px;overflow:hidden;border:1px solid rgba(255,255,255,.05)}
+.monitor-screen img{width:100%;display:block}
+.monitor-stand{width:60%;height:10px;margin:0 auto;background:linear-gradient(180deg, #2a2a2a, #0a0a0a);border-radius:0 0 6px 6px}
+.monitor-stand::after{content:"";display:block;width:90px;height:6px;margin:8px auto 0;background:#1a1a1a;border-radius:4px}
+
+.targeting{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:center;margin:18px 0}
+.target-node{border:1px solid var(--line-2);border-radius:4px;padding:14px;background:rgba(0,229,255,.04);text-align:center;font-family:var(--mono);font-size:11px}
+.target-node.mid{background:rgba(255,0,168,.08);border-color:rgba(255,0,168,.4)}
+.target-node .big{font-size:20px;font-weight:700;color:var(--blue);display:block;margin-bottom:4px}
+.target-node.mid .big{color:var(--mag)}
+.target-arrow{font-family:var(--mono);color:var(--blue);font-size:20px;text-align:center}
+@media(max-width:700px){.targeting{grid-template-columns:1fr;gap:8px}.target-arrow{transform:rotate(90deg)}}
+
+.tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tool-grid .img-frame{padding:6px}
+@media(max-width:700px){.tool-grid{grid-template-columns:repeat(2,1fr)}}
+
+.timeline{position:relative}
+.tl-item{display:grid;grid-template-columns:200px 1fr;gap:30px;padding:28px 0;border-top:1px solid var(--line);position:relative;transition:background .3s}
+.tl-item:hover{background:rgba(0,229,255,.02)}
+.tl-item:last-child{border-bottom:1px solid var(--line)}
+.tl-date{font-family:var(--mono);font-size:12px;color:var(--blue)}
+.tl-date .period{display:block;color:var(--txt-3);font-size:10px;margin-top:4px}
+.tl-body h4{font-family:var(--display);font-size:18px;font-weight:700;letter-spacing:-.01em;margin-bottom:6px}
+.tl-body .role{font-family:var(--mono);font-size:11px;color:var(--txt-2);margin-bottom:14px}
+.tl-body .role .dot{color:var(--blue);margin:0 8px}
+.tl-body p{font-size:13px;color:var(--txt-2);line-height:1.8;margin-bottom:10px}
+.tl-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}
+.tl-tags .t{font-family:var(--mono);font-size:10px;padding:4px 10px;border:1px solid var(--line-2);border-radius:2px;color:var(--txt-2)}
+@media(max-width:700px){.tl-item{grid-template-columns:1fr;gap:10px}}
+
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.skill-cat{border:1px solid var(--line);border-radius:6px;padding:20px;background:rgba(255,255,255,.02)}
+.skill-cat h5{font-family:var(--mono);font-size:11px;color:var(--blue);text-transform:uppercase;letter-spacing:.1em;margin-bottom:16px;display:flex;justify-content:space-between}
+.skill-cat h5 .n{color:var(--txt-3)}
+.skill-list{display:flex;flex-direction:column;gap:8px}
+.skill-list span{font-family:var(--mono);font-size:12px;color:var(--txt-2);display:flex;align-items:center;gap:8px}
+.skill-list span::before{content:">";color:var(--blue);font-weight:700}
+@media(max-width:800px){.skills{grid-template-columns:repeat(2,1fr)}}
+
+.code-block{background:#070707;border:1px solid var(--line);border-radius:8px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.code-head{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;background:#0e0e0e;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--txt-3)}
+.code-head .tabs{display:flex;gap:4px}
+.code-head .tab{padding:6px 14px;background:#070707;border:1px solid var(--line);border-bottom:none;border-radius:4px 4px 0 0;color:var(--txt-2)}
+.code-head .tab.active{background:#070707;color:var(--blue);border-color:var(--blue)}
+.code-body{padding:24px 28px;font-family:var(--mono);font-size:13px;line-height:2;color:var(--txt);overflow-x:auto}
+.code-body .num{display:inline-block;width:30px;color:var(--txt-3);user-select:none;text-align:right;margin-right:18px}
+.code-body .cm{color:#5a6a70;font-style:italic}
+.code-body .kw{color:#C792EA}
+.code-body .fn{color:#82AAFF}
+.code-body .str{color:#C3E88D}
+.code-body .var{color:#F78C6C}
+.code-body .bl{color:var(--blue)}
+.code-body .num-l{color:#F78C6C}
+
+.beyond-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.beyond-card{border:1px solid var(--line);border-radius:8px;padding:28px;background:linear-gradient(135deg, rgba(0,229,255,.04), rgba(255,255,255,0));position:relative;overflow:hidden}
+.beyond-card::before{content:"";position:absolute;top:0;left:0;width:80px;height:2px;background:var(--blue)}
+.beyond-card .bh{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font-family:var(--mono);font-size:11px;color:var(--txt-3);letter-spacing:.15em;text-transform:uppercase}
+.beyond-card .bh .pl{color:var(--blue)}
+.beyond-card .btitle{font-family:var(--display);font-size:18px;font-weight:700;letter-spacing:-.01em;margin-bottom:14px}
+.beyond-card .bn{font-family:var(--mono);font-weight:700;font-size:clamp(36px,5vw,56px);color:var(--blue);line-height:1;letter-spacing:-.03em;text-shadow:0 0 30px rgba(0,229,255,.25)}
+.beyond-card .bn .u{font-size:.4em;color:var(--txt-2);font-weight:500}
+.beyond-card .bn .delta{font-size:.3em;color:var(--gr);margin-left:8px;font-weight:500}
+.beyond-card .bd{font-family:var(--mono);font-size:12px;color:var(--txt-2);margin-top:12px;line-height:1.7}
+.beyond-card .bd b{color:var(--txt);font-weight:500}
+@media(max-width:820px){.beyond-grid{grid-template-columns:1fr}}
+
+footer{padding:60px 40px 40px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;font-family:var(--mono);font-size:11px;color:var(--txt-3);position:relative;z-index:2;max-width:1400px;margin:0 auto}
+footer .f-links{display:flex;gap:20px}
+footer .f-links a:hover{color:var(--blue)}
+footer .signature{color:var(--blue)}
+
+.hline{height:1px;width:100%;background:linear-gradient(90deg, transparent, var(--blue), transparent);opacity:.3;margin:24px 0}
+a.case-link{font-family:var(--mono);font-size:10px;color:var(--blue);letter-spacing:.2em;text-decoration:none;border-bottom:1px dashed rgba(0,229,255,.4);padding-bottom:1px;transition:border-color .2s,opacity .2s}
+a.case-link:hover{opacity:.7;border-color:var(--blue)}
+.scan{position:relative}
+.scan::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg, rgba(0,229,255,.03) 0, rgba(0,229,255,.03) 1px, transparent 1px, transparent 3px);mix-blend-mode:overlay}
+
+.data-chart{background:#070a0c;border:1px solid var(--line);border-radius:4px;padding:14px}
+.data-chart-head{display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;color:var(--txt-3);margin-bottom:10px}
+
+.kw-shift{margin-top:16px;display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:stretch}
+.kw-shift .box{border:1px solid var(--line-2);border-radius:4px;padding:14px;font-family:var(--mono);font-size:11px;color:var(--txt-2)}
+.kw-shift .box.before{background:rgba(255,68,85,.06);border-color:rgba(255,68,85,.3)}
+.kw-shift .box.after{background:rgba(0,255,163,.06);border-color:rgba(0,255,163,.3)}
+.kw-shift .box .hd{font-size:9px;color:var(--txt-3);text-transform:uppercase;margin-bottom:6px;letter-spacing:.15em}
+.kw-shift .box .word{font-size:18px;font-weight:700;color:var(--txt);letter-spacing:-.01em;margin-bottom:6px}
+.kw-shift .box.before .word{color:var(--red)}
+.kw-shift .box.after .word{color:var(--gr)}
+.kw-shift .box .rs{font-size:10px;color:var(--txt-3);line-height:1.6}
+.kw-shift .arr{align-self:center;font-family:var(--mono);color:var(--blue);font-size:18px;text-align:center}
+@media(max-width:700px){.kw-shift{grid-template-columns:1fr;gap:8px}.kw-shift .arr{transform:rotate(90deg)}}
+
+/* ===== BEYOND — proof images ===== */
+.proof-row{display:grid;gap:16px;margin-top:30px}
+.proof-row.blog{grid-template-columns:1fr 1fr}
+.proof-row.reels{grid-template-columns:repeat(3,1fr)}
+@media(max-width:720px){.proof-row.blog,.proof-row.reels{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.proof-row.reels{grid-template-columns:repeat(3,1fr)}}
+
+.proof-card{border:1px solid var(--line);border-radius:8px;overflow:hidden;position:relative;background:rgba(255,255,255,.02)}
+.proof-card::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--blue);z-index:2}
+.proof-card img{width:100%;display:block;height:auto;object-fit:contain;background:#0a0a0a}
+.proof-card.tall img{aspect-ratio:auto}
+.proof-card .img-wrap{background:#0a0a0a;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.proof-card .img-wrap.portrait{aspect-ratio:9/16;max-height:480px}
+.proof-card .img-wrap.landscape{aspect-ratio:16/9}
+.proof-card .img-wrap img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+@media(max-width:720px){
+  .proof-card .img-wrap.portrait{aspect-ratio:auto;max-height:none;min-height:280px}
+  .proof-card .img-wrap.landscape{aspect-ratio:auto;min-height:180px}
+}
+.proof-meta{padding:12px 14px}
+.proof-meta .pm-label{font-family:var(--mono);font-size:9px;color:var(--txt-3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:6px}
+.proof-meta .pm-num{font-family:var(--mono);font-weight:700;font-size:22px;color:var(--blue);letter-spacing:-.02em;line-height:1}
+.proof-meta .pm-num .pg{color:var(--gr);font-size:.6em;margin-left:6px;font-weight:500}
+.proof-meta .pm-desc{font-family:var(--mono);font-size:11px;color:var(--txt-2);margin-top:5px;line-height:1.5}
+
+.beyond-exp{
+  border:1px solid var(--line);border-radius:8px;padding:28px;
+  background:linear-gradient(135deg, rgba(0,229,255,.04), rgba(255,255,255,0));
+  position:relative;overflow:hidden;margin-bottom:16px;
+}
+.beyond-exp::before{content:"";position:absolute;top:0;left:0;width:80px;height:2px;background:var(--blue)}
+.beyond-exp .bh{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;font-family:var(--mono);font-size:11px;color:var(--txt-3);letter-spacing:.15em;text-transform:uppercase}
+.beyond-exp .bh .pl{color:var(--blue)}
+.beyond-exp .btitle{font-family:var(--display);font-size:18px;font-weight:700;letter-spacing:-.01em;margin-bottom:10px}
+.beyond-exp .bn{font-family:var(--mono);font-weight:700;font-size:clamp(36px,5vw,52px);color:var(--blue);line-height:1;letter-spacing:-.03em;text-shadow:0 0 30px rgba(0,229,255,.25)}
+.beyond-exp .bn .u{font-size:.4em;color:var(--txt-2);font-weight:500}
+.beyond-exp .bn .delta{font-size:.32em;color:var(--gr);margin-left:8px;font-weight:500}
+.beyond-exp .bd{font-family:var(--mono);font-size:12px;color:var(--txt-2);margin-top:12px;line-height:1.8}
+.beyond-exp .bd b{color:var(--txt);font-weight:500}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section{
+  padding:100px 40px 80px;
+  position:relative;z-index:2;
+  max-width:1400px;margin:0 auto;
+}
+@media(max-width:820px){.contact-section{padding:70px 20px 60px}}
+
+.contact-inner{
+  border:1px solid rgba(0,229,255,.25);
+  border-radius:12px;
+  padding:60px;
+  background:linear-gradient(135deg, rgba(0,229,255,.06), rgba(255,0,168,.03), rgba(10,10,10,0));
+  backdrop-filter:blur(10px);
+  position:relative;overflow:hidden;
+  display:grid;grid-template-columns:1fr auto;gap:60px;align-items:center;
+}
+.contact-inner::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg, var(--blue), var(--mag), transparent);
+}
+.contact-inner::after{
+  content:"";position:absolute;
+  top:-80px;right:-80px;width:300px;height:300px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(0,229,255,.08), transparent 70%);
+  pointer-events:none;
+}
+.contact-left .c-badge{
+  font-family:var(--mono);font-size:11px;color:var(--blue);
+  letter-spacing:.25em;text-transform:uppercase;
+  display:flex;align-items:center;gap:10px;margin-bottom:24px;
+}
+.contact-left .c-badge::before{
+  content:"";width:6px;height:6px;border-radius:50%;
+  background:var(--gr);box-shadow:0 0 10px var(--gr);
+  animation:pulse 1.5s infinite;
+}
+.contact-left h2{
+  font-family:var(--display);font-size:clamp(28px,4vw,52px);
+  font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-bottom:16px;
+}
+.contact-left h2 .accent{color:var(--blue);text-shadow:0 0 20px var(--blue-glow)}
+.contact-left p{font-family:var(--mono);font-size:13px;color:var(--txt-2);line-height:1.8;max-width:500px}
+
+.contact-links{
+  display:flex;flex-direction:column;gap:14px;
+  min-width:260px;
+}
+.c-link{
+  display:flex;align-items:center;gap:14px;
+  border:1px solid var(--line-2);border-radius:6px;
+  padding:16px 20px;
+  font-family:var(--mono);font-size:13px;color:var(--txt-2);
+  background:rgba(255,255,255,.02);
+  transition:border-color .25s, background .25s, color .25s;
+  cursor:pointer;position:relative;overflow:hidden;
+}
+.c-link:hover{border-color:var(--blue);background:var(--blue-dim);color:var(--txt)}
+.c-link .c-icon{
+  width:36px;height:36px;border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(0,229,255,.1);flex-shrink:0;font-size:16px;
+}
+.c-link .c-info{flex:1}
+.c-link .c-type{font-size:9px;color:var(--txt-3);letter-spacing:.2em;text-transform:uppercase;display:block;margin-bottom:3px}
+.c-link .c-val{color:var(--txt);font-size:12px;font-weight:500}
+.c-link .c-arrow{color:var(--txt-3);font-size:14px;transition:transform .2s, color .2s}
+.c-link:hover .c-arrow{transform:translateX(4px);color:var(--blue)}
+.c-link.primary{border-color:rgba(0,229,255,.4);background:rgba(0,229,255,.06)}
+.c-link.primary .c-icon{background:rgba(0,229,255,.2)}
+.c-link.primary .c-val{color:var(--blue)}
+
+@media(max-width:900px){
+  .contact-inner{grid-template-columns:1fr;gap:40px;padding:40px 30px}
+  .contact-links{min-width:auto}
+}
+@media(max-width:480px){.contact-inner{padding:30px 20px}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-logo">
+    <div class="dot"></div>
+    JEONG<span>.log()</span>
+  </div>
+  <div class="nav-links">
+    <a href="#summary">01. Summary</a>
+    <a href="#cases">02. Archive</a>
+    <a href="#career">03. Career</a>
+    <a href="#beyond">04. Lab</a>
+  </div>
+  <div class="nav-status">
+    <span class="led"></span>
+    <span>STATUS: OPEN_TO_WORK</span>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-meta" data-aos="fade-up">
+      <span>v5.0.2026</span>
+      <span>GROWTH · PERFORMANCE MARKETER</span>
+      <span>SEOUL · KR</span>
+    </div>
+    <h1 data-aos="fade-up" data-aos-delay="100">
+      <span class="thin">Growth Marketer</span><br>
+      JEONG<br>
+      <span class="accent">JI-AN</span>
+    </h1>
+
+    <div class="terminal" data-aos="fade-up" data-aos-delay="200">
+      <div class="terminal-bar">
+        <span class="tb-dot r"></span>
+        <span class="tb-dot y"></span>
+        <span class="tb-dot g"></span>
+        <span class="tb-title">~/jeong/portfolio — zsh — 80×24</span>
+      </div>
+      <div class="terminal-body">
+        <span class="prompt">$</span> System.out.println(<span class="str" id="tw1">""</span>);<br>
+        <span class="prompt">$</span> System.out.println(<span class="str" id="tw2">""</span>);<br>
+        <span class="cm" id="tw3" style="display:none">// 그로스 · 퍼포먼스 마케터 | 정지안</span>
+      </div>
+    </div>
+
+    <div class="hero-tags" data-aos="fade-up" data-aos-delay="300">
+      <span class="tag-pill blue">#FunnelRedesign</span>
+      <span class="tag-pill">#GA4</span>
+      <span class="tag-pill">#GTM</span>
+      <span class="tag-pill">#MetaAds</span>
+      <span class="tag-pill">#TikTokAds</span>
+      <span class="tag-pill">#AppsScript</span>
+      <span class="tag-pill">#Figma</span>
+    </div>
+  </div>
+
+  <div class="hero-photo" data-aos="fade-left" data-aos-delay="400">
+    <div class="photo-frame">
+      <div class="photo-inner">
+        <div class="photo-corner tl"></div>
+        <div class="photo-corner tr"></div>
+        <div class="photo-corner bl"></div>
+        <div class="photo-corner br"></div>
+        <div class="photo-overlay">
+          <div><span class="label">ID:</span> JEONG_025</div>
+          <div><span class="label">REC</span> ●</div>
+        </div>
+      </div>
+    </div>
+    <div class="photo-readout">
+      <div class="line"><span>▸ EXP</span><b>5 YRS</b></div>
+      <div class="line"><span>▸ LEAD</span><b>30 MEMBERS</b></div>
+      <div class="line"><span>▸ MKT</span><b>KR · TW</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EXECUTIVE SUMMARY — 3-Tier Bento ===== -->
+<section class="section" id="summary">
+  <div class="sec-head" data-aos="fade-up">
+    <div>
+      <div class="sec-label">// SECTION <b>01</b> — BY_THE_NUMBERS</div>
+      <h2>By the Numbers</h2>
+    </div>
+    <div class="sec-desc">
+      단순한 예산 증액이 아닌<br>
+      퍼널 재설계의 결과. 구조를 뜯어고쳐 만든 성과입니다.
+    </div>
+  </div>
+
+  <!-- TIER 1 · SCALE & CAREER -->
+  <div class="bento-tier" data-aos="fade-up">
+    <div class="bento-tier-head">
+      <span class="step">1</span>
+      <span class="type">SCALE &amp; CAREER</span>
+      <span style="color:var(--txt-3)">// 체급</span>
+    </div>
+    <div class="bento-row tier-1">
+      <div class="mega">
+        <div class="mega-top">
+          <div class="mega-label">EXPERIENCE <b>· 실무 연차</b></div>
+          <div class="mega-id">CAREER_01</div>
+        </div>
+        <div>
+          <div class="mega-num"><span class="count" data-target="5">0</span><span class="unit">년 차</span></div>
+          <div class="mega-caption"><b>퍼포먼스 + 그로스 마케팅 실무</b><br>광고 실행에서 퍼널 설계까지의 전 영역을 직접 다뤄온 5년.</div>
+        </div>
+      </div>
+      <div class="mega-side">
+        <div class="ms-top"><span>TEAM OPS</span><a href="#case-04" class="case-link">CASE_04</a></div>
+        <div>
+          <div class="ms-num"><span class="big count" data-target="30">0</span><span class="unit">명</span></div>
+          <div class="ms-caption">최대 조직 운영 규모.<br><b>퇴사율 0%</b> (1년간 1명)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 2 · GROWTH & CONVERSION -->
+  <div class="bento-tier" data-aos="fade-up">
+    <div class="bento-tier-head">
+      <span class="step">2</span>
+      <span class="type">GROWTH &amp; CONVERSION</span>
+      <span style="color:var(--txt-3)">// 성과</span>
+    </div>
+    <div class="bento-row tier-2">
+      <div class="perf">
+        <div class="perf-top"><span>성형 앱 상담 문의</span><a href="#case-01" class="case-link">CASE_01</a></div>
+        <div class="perf-num"><span class="pm">×</span><span class="count" data-target="5">0</span><span class="unit">배</span></div>
+        <div class="perf-caption"><b>월 8건 → 40건+</b><br>소비자의 시선으로 보고, 직접 고쳤다.</div>
+      </div>
+      <div class="perf">
+        <div class="perf-top"><span>CTA 클릭률</span><a href="#case-05" class="case-link">CASE_05</a></div>
+        <div class="perf-num"><span class="pm">×</span><span class="count" data-target="2.2">0</span><span class="unit">배</span></div>
+        <div class="perf-caption"><b>월 25건 → 56건 (+220%)</b><br>보이지 않으면 설득할 기회조차 없다.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 3 · QUALITY & EFFICIENCY -->
+  <div class="bento-tier" data-aos="fade-up">
+    <div class="bento-tier-head">
+      <span class="step">3</span>
+      <span class="type">QUALITY &amp; EFFICIENCY</span>
+      <span style="color:var(--txt-3)">// 효율</span>
+    </div>
+    <div class="bento-row tier-3">
+      <div class="eff">
+        <div class="eff-num"><span class="dn">−</span><span class="count" data-target="55">0</span><span class="unit">%</span></div>
+        <div class="eff-body">
+          <div class="eff-label"><span>TikTok CPA 절감</span><a href="#case-06" class="case-link">CASE_06</a></div>
+          <div class="eff-caption"><b>볼륨 100% 유지</b>하면서 CPA만 절감.<br>플랫폼의 언어로 다시 만들었다.</div>
+        </div>
+      </div>
+      <div class="eff">
+        <div class="eff-num">×<span class="count" data-target="2">0</span><span class="small">46s → 1:24</span></div>
+        <div class="eff-body">
+          <div class="eff-label"><span>해외 머신러닝 학습</span><a href="#case-02" class="case-link">CASE_02</a></div>
+          <div class="eff-caption"><b>학습 데이터를 다시 정의</b>하자<br>체류시간 회복 · 리드 볼륨 2배.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CASE STUDIES ===== -->
+<section class="section" id="cases">
+  <div class="sec-head" data-aos="fade-up">
+    <div>
+      <div class="sec-label">// SECTION <b>02</b> — GROWTH_ARCHIVE / 06 INSIGHTS</div>
+      <h2>performance_log</h2>
+    </div>
+    <div class="sec-desc">
+      문제 인식 → 가설 → 핵심 수정 → 결과.<br>
+      퍼널의 어떤 계단을 왜 고쳤는지의 기록.
+    </div>
+  </div>
+
+  <!-- CASE 01 -->
+  <div class="case" id="case-01" data-aos="fade-up">
+    <div class="case-head">
+      <div class="case-id">01</div>
+      <div class="case-title">
+        <h3>강남언니 상담 문의 5배 증대</h3>
+        <div class="meta">
+          <span><span class="k">COMPANY</span> 네오커스</span>
+          <span><span class="k">TAG</span> Landing · CRO · Keyword</span>
+        </div>
+      </div>
+      <div class="case-status">● ×5 문의</div>
+    </div>
+
+    <div class="case-grid">
+      <div class="panel">
+        <div class="panel-head"><span>PROBLEM // HYPOTHESIS // FIX</span><span class="blue">01.md</span></div>
+        <div class="panel-title">'병원이 쓰는 단어' 를 '유저가 검색하는 단어' 로</div>
+
+        <div class="sub-block">
+          <div class="sb-label">PROBLEM · 문제 인식</div>
+          <ul>
+            <li>동일 시술 경쟁 병원은 월 상담 <b>50건+</b>, 우리 병원은 <b>6~8건</b> 미만 (경쟁사의 10~15% 수준)</li>
+            <li>내부 반응: "광고비를 안 써서 안 되는 것"</li>
+            <li>실제 원인: 2024년 이후 이벤트 페이지·썸네일 수정 이력 없음</li>
+            <li>병원 내부 네이밍(<b>'뺏주사'</b>) 중심 · 시술 설명 위주 랜딩 구조 → 설득 실패 + 클릭 유도 실패</li>
+          </ul>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">HYPOTHESIS · 가설</div>
+          <ul>
+            <li>강남언니 유저는 시술을 이미 확정하고 <b>병원만 고르는 고관여 타겟</b></li>
+            <li>이들에게 필요한 건 시술 정보가 아니라 "이 병원이 효과적이다" 라는 <i>확신</i></li>
+            <li>'뺏주사'는 고객친화적이지 않음 — 실제 검색어는 <i>'지방분해'</i> 가 아닐까</li>
+            <li>기존 이미지의 미 기준이 올드함 — 최근 트렌드는 가슴 부각이 아니라 <i>건강미</i></li>
+          </ul>
+        </div>
+
+        <div class="kw-shift">
+          <div class="box before">
+            <div class="hd">BEFORE · 병원 언어</div>
+            <div class="word">뺏주사</div>
+            <div class="rs">병원 시술명 기반<br>유저 검색과 불일치</div>
+          </div>
+          <div class="arr">→</div>
+          <div class="box after">
+            <div class="hd">AFTER · 유저 언어</div>
+            <div class="word">지방분해</div>
+            <div class="rs">유저 검색 키워드<br>알고리즘 친화적</div>
+          </div>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">CORE FIX · 핵심 수정</div>
+          <ul>
+            <li><b>키워드</b>: '뺏주사' → <i>'지방분해'</i> — 유저 검색 의도 + 플랫폼 알고리즘 친화적. 목표는 '브랜딩'이 아니라 '환자 확보'였다</li>
+            <li><b>썸네일</b>: 비키니 이미지(과거 트렌드) → 건강하고 탄탄한 바디라인(현재 트렌드)</li>
+            <li><b>랜딩 구조</b>: 공감 타겟팅 → 효과 이미지 → 시술 설명 → USP 강조 순으로 재설계</li>
+          </ul>
+        </div>
+
+        <div class="metric-row">
+          <div class="metric"><div class="mv">×5</div><div class="ml">상담 문의</div></div>
+          <div class="metric"><div class="mv">8 → 40+</div><div class="ml">월간 건수</div></div>
+          <div class="metric"><div class="mv">0 → 10</div><div class="ml">바비톡 추가 문의</div></div>
+        </div>
+
+        <p style="font-family:var(--mono);font-size:11px;color:var(--txt-3);line-height:1.7;margin-top:16px">강남언니 담당자 피드백: '지방분해주사' 키워드 + 시술 부위 명시가 <b>플랫폼 내부 알고리즘 노출 증가</b>로 이어지며 전환까지 연결됨. 바비톡에도 미러링 적용 → 0건 → 최대 10건.</p>
+
+        <div class="insight-block">
+          <div class="ib-lbl">INSIGHT</div>
+          <ul>
+            <li><b>클릭 후 설득까지가 마케팅이다</b></li>
+            <li>고관여 서비스는 이해보다 <b>확신이 먼저</b>다</li>
+            <li>썸네일 · 비주얼도 퍼포먼스 변수로 관리해야 한다</li>
+          </ul>
+        </div>
+
+        <div class="limit-block">
+          <div class="lb-lbl">LIMITATION</div>
+          <p>스킨부스터 시술 수요가 지방분해보다 높았으나 내부 운영 인력 부족으로 카테고리 확장 실패. <b>수요 파악 이후 실행 리소스 부족의 한계</b>를 경험한 케이스.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><span>THUMBNAIL // A/B</span><span class="blue">compare.vis</span></div>
+        <div class="compare-grid">
+          <div class="img-frame scan">
+            <div class="img-frame-head"><span>THUMB · 뺏주사</span><span class="ba before">BEFORE</span></div>
+            <div class="corner tl"></div><div class="corner br"></div>
+            <img src="https://ejj1220b-design.github.io/marketer/thumbnail-before.webp" alt="thumbnail before">
+          </div>
+          <div class="img-frame scan">
+            <div class="img-frame-head"><span>THUMB · 지방분해</span><span class="ba after">AFTER</span></div>
+            <div class="corner tl"></div><div class="corner br"></div>
+            <img src="https://ejj1220b-design.github.io/marketer/thumbnail-after.webp" alt="thumbnail after">
+          </div>
+        </div>
+
+        <div class="hline"></div>
+        <div class="panel-head"><span>LANDING PAGE // A/B</span><span class="blue">landing.vis</span></div>
+        <div class="compare-grid">
+          <div class="img-frame scan">
+            <div class="img-frame-head"><span>LDP · PREV</span><span class="ba before">BEFORE</span></div>
+            <div class="corner tl"></div><div class="corner br"></div>
+            <img src="https://ejj1220b-design.github.io/marketer/landing-before.jpg" alt="landing before">
+          </div>
+          <div class="img-frame scan">
+            <div class="img-frame-head"><span>LDP · NEW</span><span class="ba after">AFTER</span></div>
+            <div class="corner tl"></div><div class="corner br"></div>
+            <img src="https://ejj1220b-design.github.io/marketer/landing-after.png" alt="landing after">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE 02 -->
+  <div class="case" id="case-02" data-aos="fade-up">
+    <div class="case-head">
+      <div class="case-id">02</div>
+      <div class="case-title">
+        <h3>대만 Meta 머신러닝 학습 개선</h3>
+        <div class="meta">
+          <span><span class="k">COMPANY</span> 네오커스</span>
+          <span><span class="k">REGION</span> Taiwan</span>
+          <span><span class="k">TAG</span> ML · Lookalike · Dwell</span>
+        </div>
+      </div>
+      <div class="case-status">● 46s → 1:24</div>
+    </div>
+
+    <div class="case-grid case-col-narrow">
+      <div class="panel">
+        <div class="panel-head"><span>PROBLEM // HYPOTHESIS // FIX</span><span class="blue">02.md</span></div>
+        <div class="panel-title">체류시간이 짧다 = 머신러닝이 엉뚱한 유저를 학습한다</div>
+
+        <div class="sub-block">
+          <div class="sb-label">PROBLEM · 문제 인식</div>
+          <ul>
+            <li>대만 Meta 첫 집행 후 <b>트래픽은 급증</b>, 전환(WeChat 문의)은 0</li>
+            <li>평균 체류시간 <b>1분 24초 → 46초</b> 급감</li>
+            <li>트래픽 + 전환 캠페인 병행 운영, 동일 픽셀 이벤트 학습</li>
+            <li>→ 저관여 클릭 유저까지 전환 신호로 학습되며 머신러닝이 <b>이탈 유저를 정상 유저로 인식</b></li>
+            <li>Meta 측 답변: "대만 트래픽은 소모성 클릭이 많다" → 가짜 전환이 쌓이는 환경</li>
+          </ul>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">HYPOTHESIS · 가설</div>
+          <ul>
+            <li>대만은 저관여 클릭이 아니라 <b>"실수 클릭"</b> 이 많다</li>
+            <li>트래픽 증가 ≠ 성과. 고관여 유저가 유입되어야 문의가 발생하는 업종 특성</li>
+            <li>광고 성과가 아니라, <b>머신러닝이 어떤 데이터를 학습하고 있는지</b> 로 문제를 재정의</li>
+            <li>전환 기준을 '행동' 이 아니라 <i>'관여도'</i> 로 재설계해야 한다</li>
+          </ul>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">INITIAL RESPONSE · 초기 대응</div>
+          <ul>
+            <li>트래픽 광고 중단 → 전환 캠페인만 유지했지만 문의 개선 없음</li>
+            <li>→ 단순 유입 조절이 아니라 <b>학습 데이터 자체의 문제</b> 로 확정</li>
+          </ul>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">CORE FIX · 핵심 수정</div>
+        </div>
+        <div class="ba-table">
+          <div class="col b">
+            <div class="lbl">BEFORE</div>
+            <ul>
+              <li>단순 클릭/방문 기준 전환</li>
+              <li>전체 유입 기반 맞춤 타겟</li>
+              <li>저관여 포함 학습 데이터</li>
+            </ul>
+          </div>
+          <div class="col a">
+            <div class="lbl">AFTER</div>
+            <ul>
+              <li>스크롤 25% + 체류시간 조건</li>
+              <li>고관여 유저만 맞춤 타겟</li>
+              <li>유사 타겟(LAL) 단계적 확장</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="targeting">
+          <div class="target-node">
+            <span class="big">1P</span>
+            고관여 Seed<br>(스크롤 25%+ · 체류)
+          </div>
+          <div class="target-arrow">→</div>
+          <div class="target-node mid">
+            <span class="big">LAL</span>
+            단계적 유사 타겟 확장<br>Incremental
+          </div>
+        </div>
+
+        <div class="img-frame scan card" style="margin-top:18px">
+          <div class="img-frame-head"><span>TAIWAN · LOOKALIKE MAP</span><span style="color:var(--blue)">lookalike.vis</span></div>
+          <div class="corner tl"></div><div class="corner br"></div>
+          <img src="https://ejj1220b-design.github.io/marketer/lookalike.webp" alt="lookalike segmentation">
+        </div>
+
+        <div class="metric-row">
+          <div class="metric"><div class="mv">×2</div><div class="ml">리드 볼륨</div></div>
+          <div class="metric"><div class="mv">0:46 → 1:24</div><div class="ml">체류시간 회복</div></div>
+        </div>
+
+        <p style="font-family:var(--mono);font-size:11px;color:var(--txt-3);line-height:1.7;margin-top:14px">볼륨은 줄었지만 <b>전환 효율과 유저 질이 동시에 개선</b>.</p>
+
+        <div class="insight-block">
+          <div class="ib-lbl">INSIGHT</div>
+          <ul>
+            <li><b>트래픽은 성과가 아니라 재료</b> — 질 낮은 트래픽은 머신러닝을 망가뜨린다</li>
+            <li>전환 이벤트는 <b>행동이 아니라 의도 기준</b> 으로 설계해야 한다</li>
+            <li>머신러닝은 자동이 아니라 <b>방향 설정</b> — 잘못된 데이터는 계속 틀린 방향으로 최적화된다</li>
+          </ul>
+        </div>
+
+        <div class="limit-block">
+          <div class="lb-lbl">LIMITATION</div>
+          <p>타겟이 좁아지며 광고 소진 속도 감소 — 빠른 모객이 필요한 상황에서는 비효율 발생 가능. → <b>체류시간/스크롤 기준 단계적 완화</b> + 볼륨 확보용 · 고관여 타겟 <b>2트랙 운영</b>으로 대응.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><span>DWELL TIME // DELTA</span><span class="blue">graph.vis</span></div>
+        <p style="margin-bottom:14px">체류시간이 살아나자 머신러닝이 '진짜 유저' 를 학습하기 시작했습니다. 같은 예산·같은 캠페인 구조 안에서 Seed 정의만 바꾼 결과입니다.</p>
+
+        <div class="data-chart">
+          <div class="data-chart-head"><span>CHART · BEFORE</span><span style="color:var(--red)">46s · 왜곡된 학습</span></div>
+          <div class="img-frame scan" style="padding:0;border:none;background:none">
+            <img src="https://ejj1220b-design.github.io/marketer/dwell-before.png" alt="dwell time before" style="aspect-ratio:auto">
+          </div>
+        </div>
+
+        <div class="data-chart" style="margin-top:14px">
+          <div class="data-chart-head"><span>CHART · AFTER</span><span style="color:var(--gr)">1m 24s · 회복</span></div>
+          <div class="img-frame scan" style="padding:0;border:none;background:none">
+            <img src="https://ejj1220b-design.github.io/marketer/dwell-after.png" alt="dwell time after" style="aspect-ratio:auto">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE 03 -->
+  <div class="case" id="case-03" data-aos="fade-up">
+    <div class="case-head">
+      <div class="case-id">03</div>
+      <div class="case-title">
+        <h3>KPI 정의 &amp; 관리 시스템 구축</h3>
+        <div class="meta">
+          <span><span class="k">COMPANY</span> 네오커스</span>
+          <span><span class="k">STACK</span> Looker · Apps Script · Airtable</span>
+        </div>
+      </div>
+      <div class="case-status">● RUNNING</div>
+    </div>
+
+    <div class="case-grid">
+      <div class="panel">
+        <div class="panel-head"><span>REDEFINE KPI</span><span class="blue">03.md</span></div>
+        <div class="panel-title">문제는 광고 성과가 아니었다 — <b>성과를 판단하는 기준</b> 이 없었다</div>
+
+        <div class="sub-block">
+          <div class="sb-label">PROBLEM · 문제 인식</div>
+          <ul>
+            <li>조직 내 해외 Meta 광고가 처음 — 최종 랜딩이 메신저라 <b>성과 측정 자체가 모호</b></li>
+            <li>좋아요·댓글은 측정되나 메신저 유입 광고는 실제 메시지 여부 확인 불가</li>
+            <li>CS와의 협업 구조 부재 — 운영은 되고 있으나 <b>잘 되고 있는지 판단할 방법이 없다</b></li>
+            <li>별도 관리 시스템 부재 → 현황 파악에 매일 장시간 소요, 판단이 늦고 주관적</li>
+          </ul>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">REFRAME · 문제 재정의</div>
+          <ul>
+            <li>광고 성과 개선이 아니라, <b>성과를 '정의' 하고 '관리' 하는 구조</b> 를 설계한다</li>
+            <li>유입을 측정할 수 있는 지표 + 메신저 문의 증감을 수치로 볼 수 있는 구조 필요</li>
+          </ul>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">CORE FIX · 핵심 수정</div>
+        </div>
+        <div class="ba-table">
+          <div class="col b">
+            <div class="lbl">BEFORE</div>
+            <ul>
+              <li>KPI: CTR 중심</li>
+              <li>CS 데이터 미연동</li>
+              <li>성과 측정 구조 부재</li>
+            </ul>
+          </div>
+          <div class="col a">
+            <div class="lbl">AFTER</div>
+            <ul>
+              <li>KPI: 진입률 (메신저 도달 기준)</li>
+              <li>광고 + CS 통합 대시보드</li>
+              <li>국가별 성과 비교 가능</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sub-block">
+          <ul>
+            <li><b>KPI 재정의</b>: CTR → 진입률(메신저 도달 기준). '전환' 은 팀 간 정의·책임 혼선이 생기지만, '진입률' 은 광고→메신저 연결까지 명확하게 측정 가능</li>
+            <li><b>CS 연결</b>: 어드민에서 CS가 상담란에 유입 메신저를 기입 → 엑셀 추출 → 광고 데이터와 연결</li>
+            <li><b>대시보드 직접 제작</b>: 광고 + CS 통합 대시보드로 국가별 성과 비교 및 의사결정 가능</li>
+          </ul>
+        </div>
+
+        <div class="metric-row">
+          <div class="metric"><div class="mv">완전 통일</div><div class="ml">KPI 기준</div></div>
+          <div class="metric"><div class="mv">측정 가능</div><div class="ml">광고+CS 연결</div></div>
+        </div>
+
+        <div class="insight-block">
+          <div class="ib-lbl">INSIGHT</div>
+          <ul>
+            <li>광고 성과는 클릭이 아니라 <b>진입 이후에서 결정</b> 된다</li>
+            <li>KPI는 플랫폼 지표만이 아니다 — 우리의 최종 전환 퍼널까지 연결될 때 <b>조직의 목표</b> 가 된다</li>
+            <li>돈을 썼으면 <b>값을 했는지 숫자로 봐야 한다</b></li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div class="monitor">
+          <div class="monitor-screen scan">
+            <img src="https://ejj1220b-design.github.io/marketer/dashboard.png" alt="dashboard monitoring">
+          </div>
+        </div>
+        <div class="monitor-stand"></div>
+        <div style="text-align:center;font-family:var(--mono);font-size:11px;color:var(--txt-2);margin-top:10px">
+          ▸ LOOKER_STUDIO · PROD_ENV
+        </div>
+        <div style="text-align:center;font-family:var(--mono);font-size:10px;color:var(--txt-3);margin-top:6px">
+          ※ 이전 이지엠앤씨 재직 시점에도 본부 내 다수의 대시보드를 직접 설계·운영
+        </div>
+
+        <div class="img-frame scan card" style="margin-top:26px">
+          <div class="img-frame-head"><span>CALL TYPE · CLASSIFIER</span><span style="color:var(--blue)">calltype.sheet</span></div>
+          <div class="corner tl"></div><div class="corner br"></div>
+          <img src="https://ejj1220b-design.github.io/marketer/calltype.png" alt="call type dashboard">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE 04 -->
+  <div class="case" id="case-04" data-aos="fade-up">
+    <div class="case-head">
+      <div class="case-id">04</div>
+      <div class="case-title">
+        <h3>30인 조직 운영 &amp; 온보딩 시스템</h3>
+        <div class="meta">
+          <span><span class="k">COMPANY</span> 이지엠앤씨</span>
+          <span><span class="k">TAG</span> People · Onboarding · Retention</span>
+        </div>
+      </div>
+      <div class="case-status">● 퇴사자 1 / 30</div>
+    </div>
+
+    <div class="case-grid">
+      <div class="panel">
+        <div class="panel-head"><span>PEOPLE OPS</span><span class="blue">04.md</span></div>
+        <div class="panel-title">성과는 개인이 아니라 <b>시스템에서 나온다</b></div>
+
+        <div class="sub-block">
+          <div class="sb-label">PROBLEM · 문제 인식</div>
+          <ul>
+            <li>동일 광고 소재를 써도 <b>담당자에 따라 성과 편차</b> 가 크게 발생</li>
+            <li>잘하는 사람에게 일이 몰림 → 그 사람이 나가면 다시 처음부터 교육하는 사이클 반복</li>
+            <li>교육 가능한 인원 자체가 한정 — 구조적 한계로 매출 성과 변동 폭이 큼</li>
+            <li>→ 조직 전체 성과가 <b>개인 역량에 의존하는 구조</b></li>
+          </ul>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">REFRAME · 문제 재정의</div>
+          <ul>
+            <li>문제는 인력이 아니라 <b>성과를 유지할 수 없는 구조</b></li>
+          </ul>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">CORE FIX · 핵심 수정</div>
+          <ul>
+            <li><b>직무 표준화</b> — 광고 운영·분석·보고 기준을 정리, 누구나 동일 기준으로 판단·실행 가능한 프로그램 구축</li>
+            <li><b>온보딩 시스템</b> — 단계별 학습 + 실무 연결 구조 · 멘토링 프로그램으로 교육 분산</li>
+            <li><b>운영 리뷰 체계</b> — 주간 리뷰 + 1:1 피드백. 데이터를 함께 보며 솔루션을 찾는 방식. 신규 아이디어도 즉각 실행 / 안 되는 이유를 근거 있게 설명해 반감 최소화</li>
+            <li><b>협업 구조 개선</b> — 팀 간 정보 공유 문화 부재 → 워크샵·이벤트 기획으로 "같은 목표를 향해 가는 팀" 인식 구축, 커리어 성장 위한 토론 문화 확립</li>
+          </ul>
+        </div>
+
+        <div class="metric-row">
+          <div class="metric"><div class="mv">1 / 30</div><div class="ml">1년간 퇴사자</div></div>
+          <div class="metric"><div class="mv">100%</div><div class="ml">신규 인력<br>정규직 전환</div></div>
+          <div class="metric"><div class="mv">최고 등급</div><div class="ml">매달 인센티브</div></div>
+        </div>
+
+        <p style="font-family:var(--mono);font-size:11px;color:var(--txt-3);line-height:1.7;margin-top:14px">동기간 나머지 3개 부서 퇴사자 합산 <b>60~70명</b> 수준에 담당 부서는 <b>1명</b>. 실무자 간 성과 편차 감소 → <b>전체 담당 병원 매출 상위권</b> 안착.</p>
+
+        <div class="insight-block">
+          <div class="ib-lbl">INSIGHT</div>
+          <ul>
+            <li>성과는 개인이 아니라 <b>시스템에서 나온다</b></li>
+            <li>조직의 성장은 <b>교육과 구조 설계가 함께</b> 이루어져야 한다</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family:var(--mono);font-size:11px;color:var(--txt-3);margin-bottom:10px">// ONBOARDING_MATERIALS</div>
+        <div class="tool-grid">
+          <div class="img-frame scan card">
+            <div class="corner tl"></div><div class="corner br"></div>
+            <img src="https://ejj1220b-design.github.io/marketer/onboarding-1.png" alt="onboarding 1">
+          </div>
+          <div class="img-frame scan card">
+            <div class="corner tl"></div><div class="corner br"></div>
+            <img src="https://ejj1220b-design.github.io/marketer/onboarding-2.png" alt="onboarding 2">
+          </div>
+          <div class="img-frame scan card">
+            <div class="corner tl"></div><div class="corner br"></div>
+            <img src="https://ejj1220b-design.github.io/marketer/onboarding-3.png" alt="onboarding 3">
+          </div>
+        </div>
+
+        <div style="font-family:var(--mono);font-size:11px;color:var(--txt-3);margin:20px 0 10px">// QUARTERLY_WORKSHOP</div>
+        <div class="tool-grid" style="grid-template-columns:repeat(2,1fr)">
+          <div class="img-frame scan card">
+            <div class="corner tl"></div><div class="corner br"></div>
+            <img src="https://ejj1220b-design.github.io/marketer/onboarding-4.webp" alt="workshop 4">
+          </div>
+          <div class="img-frame scan card">
+            <div class="corner tl"></div><div class="corner br"></div>
+            <img src="https://ejj1220b-design.github.io/marketer/onboarding-5.webp" alt="workshop 5">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE 05 -->
+  <div class="case" id="case-05" data-aos="fade-up">
+    <div class="case-head">
+      <div class="case-id">05</div>
+      <div class="case-title">
+        <h3>GA4 퍼널을 이용한 CTA 개선</h3>
+        <div class="meta">
+          <span><span class="k">COMPANY</span> 네오커스</span>
+          <span><span class="k">STACK</span> GA4 · GTM</span>
+        </div>
+      </div>
+      <div class="case-status">● +220%</div>
+    </div>
+
+    <div class="case-grid case-col-narrow">
+      <div class="panel">
+        <div class="panel-head"><span>FUNNEL DEEP DIVE</span><span class="blue">05.md</span></div>
+        <div class="panel-title">보이지 않으면 설득할 기회조차 없다</div>
+
+        <div class="sub-block">
+          <div class="sb-label">PROBLEM · 문제 인식</div>
+          <ul>
+            <li>중화권 랜딩페이지에서 <b>트래픽 대비 메신저(위챗) 전환 낮음</b></li>
+            <li>특히 <b>스크롤 25%</b> 구간에서 많은 이탈 발생</li>
+          </ul>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">HYPOTHESIS · 가설</div>
+          <ul>
+            <li>CTA 버튼의 <b>시각 대비가 낮고 위치가 아래</b> → 스크롤 중 이탈</li>
+            <li>버튼을 눈에 띄게 만들고 <b>최상단에 배치</b> 하면 전환이 개선될 것</li>
+          </ul>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">CORE FIX · 핵심 수정</div>
+        </div>
+        <div class="ba-table">
+          <div class="col b">
+            <div class="lbl">BEFORE</div>
+            <ul>
+              <li>CTA 버튼이 배경색에 묻힘</li>
+              <li>버튼 위치 하단</li>
+              <li>국가별 메신저 구분 없음</li>
+            </ul>
+          </div>
+          <div class="col a">
+            <div class="lbl">AFTER</div>
+            <ul>
+              <li>국가별 메신저 컬러로 버튼 변경</li>
+              <li>CTA 최상단 배치</li>
+              <li>국가별 주요 SNS 즉각 인식 가능</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="metric-row">
+          <div class="metric"><div class="mv">+220%</div><div class="ml">CTA 클릭</div></div>
+          <div class="metric"><div class="mv">25 → 56건</div><div class="ml">월간 (×2.2배)</div></div>
+        </div>
+
+        <p style="font-family:var(--mono);font-size:11px;color:var(--txt-3);line-height:1.7;margin-top:14px">스크롤 25% 이탈 구간에서 <b>메신저로의 전환 증가</b>.</p>
+
+        <div class="insight-block">
+          <div class="ib-lbl">INSIGHT</div>
+          <ul>
+            <li><b>보이지 않으면 설득할 기회조차 없다</b> — 직관적 UI · 시각 요소는 초기 전환율의 핵심 변수</li>
+            <li><b>이탈률 데이터</b> 로 시각적 인지 허들을 찾아낼 수 있다</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><span>FUNNEL VIZ</span><span class="blue">funnel.ga4</span></div>
+        <div class="img-frame scan" style="margin-top:8px">
+          <div class="img-frame-head"><span>GA4 · FULL FUNNEL CHART</span><span style="color:var(--gr)">LIVE</span></div>
+          <div class="corner tl"></div><div class="corner br"></div>
+          <img src="https://ejj1220b-design.github.io/marketer/funnel.png" alt="GA4 funnel">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CASE 06 -->
+  <div class="case" id="case-06" data-aos="fade-up">
+    <div class="case-head">
+      <div class="case-id">06</div>
+      <div class="case-title">
+        <h3>TikTok 크리에이티브 최적화</h3>
+        <div class="meta">
+          <span><span class="k">COMPANY</span> 네오커스</span>
+          <span><span class="k">CHANNEL</span> TikTok Ads</span>
+        </div>
+      </div>
+      <div class="case-status">● −55% CPA</div>
+    </div>
+
+    <div class="case-grid">
+      <div class="panel">
+        <div class="panel-head"><span>HOOK-FIRST CREATIVE</span><span class="blue">06.md</span></div>
+        <div class="panel-title">3초 안에 "이거 내 얘기" 라고 느끼게 만든다</div>
+
+        <div class="sub-block">
+          <div class="sb-label">PROBLEM · 문제 인식</div>
+          <ul>
+            <li>이전 직장에서 틱톡·구글 영상광고를 먼저 경험 — <b>"영상광고가 정적이면 안 된다"</b> 를 체감</li>
+            <li>이 케이스에서는 소재가 <b>정적 이미지 기반</b>, 디자인이 플랫폼 분위기와 불일치</li>
+            <li>타겟과 맞지 않는 <b>샤방샤방 · 글로시한 소재</b> → TikTok 환경에 비친화적</li>
+            <li>디자인팀과 협업 시 <b>마케터·디자이너의 언어 차이</b> 발견 — 마케터는 카피/메시지, 디자이너는 컬러/비주얼을 먼저 본다</li>
+            <li>알고리즘 작동 방식과 소재 변경 필요성을 <b>데이터로 설명</b> 하며 우선순위를 맞춰나감</li>
+          </ul>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">HYPOTHESIS · 가설</div>
+          <ul>
+            <li>TikTok 유저는 빠르게 넘기고, 사운드에 반응하며, <b>정보를 다 주면 오히려 이탈</b></li>
+            <li>호기심을 유발하고 타겟이 <b>"나 얘기네"</b> 라고 느끼는 포맷이어야 한다</li>
+            <li>→ <b>매체마다 맞는 소재와 랜딩</b> 이 따로 있다</li>
+          </ul>
+        </div>
+
+        <div class="sub-block">
+          <div class="sb-label">CORE FIX · 핵심 수정</div>
+        </div>
+        <div class="ba-table">
+          <div class="col b">
+            <div class="lbl">BEFORE</div>
+            <ul>
+              <li>정적 이미지 소재</li>
+              <li>시술명 중심 카피</li>
+              <li>정보 전달형 구성</li>
+            </ul>
+          </div>
+          <div class="col a">
+            <div class="lbl">AFTER</div>
+            <ul>
+              <li>움직이는 영상 소재로 전환</li>
+              <li>"~하신 분?" 타겟 지목형 카피</li>
+              <li>호기심 유발, 정보는 최소화</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="metric-row">
+          <div class="metric"><div class="mv">−55%</div><div class="ml">CPA 절감</div></div>
+          <div class="metric"><div class="mv">100%</div><div class="ml">볼륨 유지</div></div>
+        </div>
+
+        <div class="insight-block">
+          <div class="ib-lbl">INSIGHT</div>
+          <ul>
+            <li><b>플랫폼 친화적 소재 · 랜딩</b> — 언론사 배너는 뉴스 형식 카피/랜딩, 매체 이용자와 유입 경로를 먼저 파악해야 한다</li>
+            <li>광고 배너에서 정보를 다 주는 건 독 — <b>호기심을 남겨야 클릭</b> 한다. 고객과 마케터는 <i>썸을 타야 한다</i></li>
+            <li>마케터는 <b>본인이 광고할 매체를 무조건 직접 사용</b> 해야 한다</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-family:var(--mono);font-size:11px;color:var(--red);margin-bottom:12px">// BEFORE · 정적 이미지 · 시술명 중심</div>
+        <div class="phone-row">
+          <div>
+            <div class="phone-mockup"><img src="https://ejj1220b-design.github.io/marketer/tiktok-before-1.jpg" alt="tiktok before 1"></div>
+            <div class="phone-label">AD_01 · v1</div>
+          </div>
+          <div>
+            <div class="phone-mockup"><img src="https://ejj1220b-design.github.io/marketer/tiktok-before-2.jpg" alt="tiktok before 2"></div>
+            <div class="phone-label">AD_02 · v1</div>
+          </div>
+        </div>
+
+        <div style="font-family:var(--mono);font-size:11px;color:var(--gr);margin:24px 0 12px">// AFTER · 영상 · 타겟 지목형 카피</div>
+        <div class="phone-row">
+          <div>
+            <div class="phone-mockup"><img src="https://ejj1220b-design.github.io/marketer/tiktok-after-1.jpg" alt="tiktok after 1"></div>
+            <div class="phone-label">AD_01 · v2 ★</div>
+          </div>
+          <div>
+            <div class="phone-mockup"><img src="https://ejj1220b-design.github.io/marketer/tiktok-after-2.jpg" alt="tiktok after 2"></div>
+            <div class="phone-label">AD_02 · v2 ★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAREER ===== -->
+<section class="section" id="career">
+  <div class="sec-head" data-aos="fade-up">
+    <div>
+      <div class="sec-label">// SECTION <b>03</b> — CAREER_LOG</div>
+      <h2>Career &amp; Skills</h2>
+    </div>
+    <div class="sec-desc">
+      비즈니스의 최종 목표를 쫓는 설계를 합니다.<br>
+      5년 동안 멈추지 않고 성장해 왔습니다.
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item" data-aos="fade-up">
+      <div class="tl-date">2025.12 — NOW<div class="period">Current</div></div>
+      <div class="tl-body">
+        <h4>네오커스 <span style="color:var(--txt-3);font-weight:400;font-size:13px;font-family:var(--mono)">· Neocus</span></h4>
+        <div class="role">국내팀 총괄 &amp; 글로벌 퍼포먼스 총괄<span class="dot">·</span>성형외과 · 클리닉 전문 MSO</div>
+        <div class="tl-tags">
+          <span class="t">Global Performance</span><span class="t">Meta Ads</span><span class="t">TikTok Ads</span><span class="t">GA4</span><span class="t">GTM</span><span class="t">Apps Script</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item" data-aos="fade-up">
+      <div class="tl-date">2025.09 — 2025.12<div class="period">Perf. Marketer</div></div>
+      <div class="tl-body">
+        <h4>브랜딩라이즈 <span style="color:var(--txt-3);font-weight:400;font-size:13px;font-family:var(--mono)">· Branding Rise</span></h4>
+        <div class="role">퍼포먼스 마케터<span class="dot">·</span>법률 · 병원 · 소비재 · 화장품</div>
+        <div class="tl-tags">
+          <span class="t">법률</span><span class="t">병원</span><span class="t">소비재</span><span class="t">화장품</span><span class="t">A/B Test</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item" data-aos="fade-up">
+      <div class="tl-date">2021.03 — 2025.08<div class="period">4y 6m</div></div>
+      <div class="tl-body">
+        <h4>이지엠앤씨 <span style="color:var(--txt-3);font-weight:400;font-size:13px;font-family:var(--mono)">· EZ M&amp;C</span></h4>
+        <div class="role">마케팅 팀장 → 부서장<span class="dot">·</span>MSO 7개 지점 총괄</div>
+        <div class="tl-tags">
+          <span class="t">MSO 7 Branches</span><span class="t">Team Lead</span><span class="t">Onboarding</span><span class="t">Dashboard</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills">
+    <div class="skill-cat" data-aos="fade-up">
+      <h5><span>▸ AD TECH</span><span class="n">01</span></h5>
+      <div class="skill-list">
+        <span>Meta Ads</span>
+        <span>Google Ads</span>
+        <span>TikTok Ads</span>
+        <span>GA4 · GTM</span>
+        <span>Taboola</span>
+        <span>Kakao · Naver SA/DA</span>
+        <span>Toss · 당근마켓</span>
+      </div>
+    </div>
+    <div class="skill-cat" data-aos="fade-up" data-aos-delay="50">
+      <h5><span>▸ AUTOMATION &amp; OPS</span><span class="n">02</span></h5>
+      <div class="skill-list">
+        <span>Google Apps Script</span>
+        <span>Zapier</span>
+        <span>Make.com</span>
+        <span>Amplitude</span>
+        <span>Looker Studio</span>
+      </div>
+    </div>
+    <div class="skill-cat" data-aos="fade-up" data-aos-delay="100">
+      <h5><span>▸ DESIGN &amp; TOOLS</span><span class="n">03</span></h5>
+      <div class="skill-list">
+        <span>Photoshop · Illustrator</span>
+        <span>Premiere Pro · CapCut</span>
+        <span>Figma</span>
+        <span>Excel (Advanced)</span>
+        <span>Notion</span>
+      </div>
+    </div>
+    <div class="skill-cat" data-aos="fade-up" data-aos-delay="150">
+      <h5><span>▸ CERTIFICATES</span><span class="n">04</span></h5>
+      <div class="skill-list">
+        <span>검색광고 마케터 1급</span>
+        <span>SNS 광고 마케터 1급</span>
+        <span>Google Analytics GAIQ</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BEYOND WORK — LAB ===== -->
+<section class="section" id="beyond">
+  <div class="sec-head" data-aos="fade-up">
+    <div>
+      <div class="sec-label">// SECTION <b>04</b> — PERSONAL_LAB</div>
+      <h2>Off-Duty Experiments</h2>
+    </div>
+    <div class="sec-desc">
+      내 계정을 실험실로 씁니다.<br>
+      가설 → 실행 → 결과가 가장 빠르게 도는 곳.
+    </div>
+  </div>
+
+  <div class="code-block" data-aos="fade-up">
+    <div class="code-head">
+      <div class="tabs">
+        <div class="tab active">lab.js</div>
+        <div class="tab">readme.md</div>
+      </div>
+      <span>UTF-8 · LF · JavaScript</span>
+    </div>
+    <div class="code-body">
+<span class="num">01</span><span class="cm">// 내 계정 = 가장 저렴한 실험실.</span><br>
+<span class="num">02</span><span class="cm">// 가설을 세우고, 바로 발행하고, 숫자로 검증한다.</span><br>
+<span class="num">03</span><br>
+<span class="num">04</span><span class="kw">const</span> <span class="var">blog</span> = {<br>
+<span class="num">05</span>&nbsp;&nbsp;<span class="cm">// 꾸준히 정보성 글을 올리고 있었다.</span><br>
+<span class="num">06</span>&nbsp;&nbsp;<span class="cm">// 시즌성 반영한 벚꽃 명소 글 → 메인홈 + 키워드 상위 → 첫 스파크 발생.</span><br>
+<span class="num">07</span>&nbsp;&nbsp;<span class="cm">// "지금 사람들이 찾는 것"과 "꾸준히 찾는 것"의 차이를 확인.</span><br>
+<span class="num">08</span>&nbsp;&nbsp;<span class="cm">// → 내가 자신있는 분야 × 시즈널 키워드 × 남들보다 빠른 포스팅.</span><br>
+<span class="num">09</span>&nbsp;&nbsp;<span class="cm">// → 롱테일 키워드로 검색 상위노출 설계하자 방문자 수 폭등.</span><br>
+<span class="num">10</span>&nbsp;&nbsp;<span class="fn">insight</span>: <span class="str">"시즈널 키워드를 먼저 치는 자가 알고리즘을 선점한다"</span>,<br>
+<span class="num">11</span>&nbsp;&nbsp;<span class="fn">lever</span>: <span class="str">"롱테일 키워드 + 네이버 로직 기반 상위노출"</span>,<br>
+<span class="num">12</span>&nbsp;&nbsp;<span class="fn">growth</span>: { daily: [<span class="num-l">78</span>, <span class="num-l">1225</span>], period: <span class="str">"1개월"</span>, delta: <span class="str">"×15"</span> }<br>
+<span class="num">13</span>};<br>
+<span class="num">14</span><br>
+<span class="num">15</span><span class="kw">const</span> <span class="var">insta</span> = {<br>
+<span class="num">16</span>&nbsp;&nbsp;<span class="cm">// 3/2 가성비라멘(393뷰) → 3/4 스타벅스(2,201뷰) → 3/6 하이디라오(2만뷰).</span><br>
+<span class="num">17</span>&nbsp;&nbsp;<span class="cm">// 이틀 간격으로 뷰가 폭등. 콘텐츠 자체보다 소재 + 타이밍이 결정한다.</span><br>
+<span class="num">18</span>&nbsp;&nbsp;<span class="cm">// 하이디라오 = 주말에 가고 싶어지는 핫플 → 금요일 직전에 올려야 의미 있다.</span><br>
+<span class="num">19</span>&nbsp;&nbsp;<span class="fn">insight</span>: <span class="str">"'언제'가 '무엇'만큼 중요하다 — 소재의 소비 타이밍을 먼저 읽어라"</span>,<br>
+<span class="num">20</span>&nbsp;&nbsp;<span class="fn">lever</span>: <span class="str">"주말 수요 핫플 × 금요일 10AM 발행"</span>,<br>
+<span class="num">21</span>&nbsp;&nbsp;<span class="fn">growth</span>: { reels: [<span class="num-l">393</span>, <span class="num-l">20000</span>], period: <span class="str">"4일"</span>, delta: <span class="str">"+6,500%"</span> }<br>
+<span class="num">22</span>};<br>
+<span class="num">23</span><br>
+<span class="num">24</span><span class="cm">// 결론: 매체 없이도 가설은 검증된다.</span><br>
+<span class="num">25</span>[<span class="var">blog</span>, <span class="var">insta</span>].<span class="fn">forEach</span>(e =&gt; e.<span class="fn">run</span>());
+    </div>
+  </div>
+
+  <!-- BLOG -->
+  <div style="margin-top:40px" data-aos="fade-up">
+    <div class="beyond-exp">
+      <div class="bh"><span>▸ BLOG · NAVER</span><span class="pl">CONTENT LAB</span></div>
+      <div class="btitle">시즈널 키워드를 먼저 치는 자가 알고리즘을 선점한다</div>
+      <div class="bn"><span class="count" data-target="1225">0</span><span class="u"> / day</span><span class="delta">×15 성장</span></div>
+      <div class="bd">일 방문자 <b>78 → 1,225</b> · 약 1개월<br>꾸준히 정보성 글을 올리던 중, 시즌성을 반영한 <b>벚꽃 명소 추천</b> 글이 메인홈과 키워드 상위에 노출되며 첫 스파크 발생. "지금 사람들이 찾는 것"과 "내가 자신있는 것"이 겹치는 지점을 찾아 <b>롱테일 키워드 기반 상위노출</b>을 설계하자 방문자 폭등.</div>
+    </div>
+    <div class="proof-row blog">
+      <div class="proof-card">
+        <div class="img-wrap landscape">
+          <img src="https://ejj1220b-design.github.io/marketer/blog-before.png" alt="블로그 방문자 before">
+        </div>
+        <div class="proof-meta">
+          <div class="pm-label">BEFORE · 2026.03.16</div>
+          <div class="pm-num">78<span class="pg">명/일</span></div>
+          <div class="pm-desc">개선 전 일 방문자</div>
+        </div>
+      </div>
+      <div class="proof-card">
+        <div class="img-wrap landscape">
+          <img src="https://ejj1220b-design.github.io/marketer/blog-after.png" alt="블로그 방문자 after">
+        </div>
+        <div class="proof-meta">
+          <div class="pm-label">AFTER · 2026.04.18</div>
+          <div class="pm-num" style="color:var(--gr)">1,225<span class="pg">+명/일</span></div>
+          <div class="pm-desc">약 1개월 뒤 일 방문자</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INSTAGRAM -->
+  <div style="margin-top:32px" data-aos="fade-up">
+    <div class="beyond-exp">
+      <div class="bh"><span>▸ INSTAGRAM · REELS</span><span class="pl">TIMING LAB</span></div>
+      <div class="btitle">'언제'가 '무엇'만큼 중요하다</div>
+      <div class="bn"><span class="count" data-target="20000">0</span><span class="u"> views</span><span class="delta">+6,500%</span></div>
+      <div class="bd">릴스 최고 <b>2만뷰</b> · 4일 만에<br>3/2 가성비라멘 <b>393뷰</b> → 3/4 스타벅스 슈크림 <b>2,201뷰</b> → 3/6 하이디라오 <b>2만뷰</b>.<br>핵심은 <b>소재의 소비 타이밍</b>. 하이디라오는 주말에 가고 싶어지는 핫플 — <b>금요일 10AM 발행</b>으로 주말 수요를 정확히 태웠다.</div>
+    </div>
+    <div class="proof-row reels">
+      <div class="proof-card">
+        <div class="img-wrap portrait">
+          <img src="https://ejj1220b-design.github.io/marketer/reels-ramen.jpg" alt="릴스 가성비라멘">
+        </div>
+        <div class="proof-meta">
+          <div class="pm-label">3/2 · 가성비라멘</div>
+          <div class="pm-num">393<span class="pg">views</span></div>
+          <div class="pm-desc">첫 발행</div>
+        </div>
+      </div>
+      <div class="proof-card">
+        <div class="img-wrap portrait">
+          <img src="https://ejj1220b-design.github.io/marketer/reels-starbucks.jpg" alt="릴스 스타벅스">
+        </div>
+        <div class="proof-meta">
+          <div class="pm-label">3/4 · 스타벅스</div>
+          <div class="pm-num">2,201<span class="pg">views</span></div>
+          <div class="pm-desc">+459%</div>
+        </div>
+      </div>
+      <div class="proof-card">
+        <div class="img-wrap portrait">
+          <img src="https://ejj1220b-design.github.io/marketer/reels-haidilao.jpg" alt="릴스 하이디라오">
+        </div>
+        <div class="proof-meta">
+          <div class="pm-label">3/6 · 하이디라오</div>
+          <div class="pm-num" style="color:var(--gr)">2만<span class="pg">views</span></div>
+          <div class="pm-desc">금요일 발행 · 주말 수요</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner" data-aos="fade-up">
+    <div class="contact-left">
+      <div class="c-badge">OPEN TO WORK · AVAILABLE NOW</div>
+      <h2>함께 일하고<br>싶으시다면<br><span class="accent">연락주세요.</span></h2>
+      <p>퍼널을 설계하고, 숫자로 증명하는 마케터입니다.<br>좋은 제안은 언제든 환영합니다.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:ejj1220b@gmail.com" class="c-link primary">
+        <div class="c-icon">✉</div>
+        <div class="c-info">
+          <span class="c-type">EMAIL</span>
+          <span class="c-val">ejj1220b@gmail.com</span>
+        </div>
+        <span class="c-arrow">→</span>
+      </a>
+      <a href="tel:+821023188323" class="c-link">
+        <div class="c-icon">📱</div>
+        <div class="c-info">
+          <span class="c-type">PHONE</span>
+          <span class="c-val">010-2318-8323</span>
+        </div>
+        <span class="c-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>
+    <div style="color:var(--txt);font-size:14px;margin-bottom:8px;font-family:var(--display);letter-spacing:.05em">JEONG JI-AN</div>
+    <div>© 2026 Jeong Ji-an · Growth Marketer Portfolio</div>
+    <div style="margin-top:4px">Built with <span class="signature">data</span> + <span class="signature">hypothesis</span></div>
+  </div>
+  <div class="f-links">
+    <a href="#summary">Summary</a>
+    <a href="#cases">Archive</a>
+    <a href="#career">Career</a>
+    <a href="#beyond">Lab</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({ duration:700, easing:'ease-out-cubic', once:true, offset:50 });
+
+// ===== DUAL-LINE TYPEWRITER =====
+const tw1 = document.getElementById('tw1');
+const tw2 = document.getElementById('tw2');
+const tw3 = document.getElementById('tw3');
+const line1 = "클릭에 속지 않습니다.";
+const line2 = "숫자 뒤의 심리를 분석해 전환을 만들어 냅니다.";
+
+function typeInto(el, text, speed, onDone){
+  let i = 0;
+  function step(){
+    if(i <= text.length){
+      el.textContent = '"' + text.slice(0, i) + '"';
+      i++;
+      setTimeout(step, speed);
+    } else if(onDone){ onDone(); }
+  }
+  step();
+}
+setTimeout(()=>{
+  typeInto(tw1, line1, 70, ()=>{
+    setTimeout(()=>{
+      typeInto(tw2, line2, 65, ()=>{
+        setTimeout(()=>{ tw3.style.display = 'block'; }, 200);
+      });
+    }, 300);
+  });
+}, 500);
+
+// ===== COUNT UP =====
+const counters = document.querySelectorAll('.count');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting && !entry.target.dataset.done){
+      entry.target.dataset.done = '1';
+      const el = entry.target;
+      const target = parseFloat(el.dataset.target);
+      const isFloat = !Number.isInteger(target);
+      const duration = 1600;
+      const startTime = performance.now();
+      function easeOutExpo(t){ return t === 1 ? 1 : 1 - Math.pow(2, -10 * t); }
+      function tick(now){
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed/duration, 1);
+        const eased = easeOutExpo(progress);
+        const current = target * eased;
+        if(target >= 1000){ el.textContent = Math.floor(current).toLocaleString(); }
+        else if(isFloat){ el.textContent = current.toFixed(1); }
+        else { el.textContent = Math.floor(current); }
+        if(progress < 1) requestAnimationFrame(tick);
+        else {
+          if(target >= 1000) el.textContent = target.toLocaleString();
+          else if(isFloat) el.textContent = target.toFixed(1);
+          else el.textContent = target;
+        }
+      }
+      requestAnimationFrame(tick);
+    }
+  });
+},{threshold:0.5});
+counters.forEach(c=>io.observe(c));
+
+// ===== SMOOTH SCROLL (nav + bento case links) =====
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const href = a.getAttribute('href');
+    const target = document.querySelector(href);
+    if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth'}); }
+  });
+});
+</script>
+</body>
+</html>
